@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أطلس هايدواي – ملاذك في قلب الأطلس</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Atlas Hideaway</div>
+        <div class="nav-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#rooms">الغرف</a>
+            <a href="#gallery">صور الغرف</a>
+            <a href="#special">وجبة اليوم</a>
+            <a href="#location">الموقع</a>
+            <a href="#contact">اتصل بنا</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>مرحباً بك في أطلس هايدواي</h1>
+        <p>ملاذ هادئ بين جبال الأطلس، حيث يلتقي الجمال الطبيعي بالراحة العصرية.</p>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+        <h2 class="section-title">اختر غرفتك المثالية</h2>
+        <div class="rooms">
+            <div class="room-card">
+                <img src="{{ url_for('static', filename='images/room1.png') }}" alt="غرفة فاخرة" class="room-img">
+                <div class="room-info">
+                    <h3>غرفة فاخرة</h3>
+                    <p>مع إطلالة على الجبال وشرفة خاصة.</p>
+                    <div class="room-price">من 800 درهم / ليلة</div>
+                    <a href="https://wa.me/+212713009090?text=أريد حجز غرفة فاخرة" target="_blank" class="btn">احجز الآن</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="{{ url_for('static', filename='images/room2.png') }}" alt="جناح عائلي" class="room-img">
+                <div class="room-info">
+                    <h3>جناح عائلي</h3>
+                    <p>مساحة واسعة، مناسبة للعائلات حتى 4 أشخاص.</p>
+                    <div class="room-price">من 1200 درهم / ليلة</div>
+                    <a href="https://wa.me/212612345678?text=أريد حجز جناح عائلي" target="_blank" class="btn">احجز الآن</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="{{ url_for('static', filename='images/room3.png') }}" alt="جناح رومانسي" class="room-img">
+                <div class="room-info">
+                    <h3>جناح رومانسي</h3>
+                    <p>للأزواج فقط، مع حمام ساخن وإفطار خاص.</p>
+                    <div class="room-price">من 1500 درهم / ليلة</div>
+                    <a href="https://wa.me/212612345678?text=أريد حجز جناح رومانسي" target="_blank" class="btn">احجز الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2 class="section-title">جولة داخل غرفنا</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/room1.png') }}" alt="غرفة 1">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/room2.png') }}" alt="غرفة 2">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/room3.png') }}" alt="غرفة 3">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/room4.png') }}" alt="غرفة 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Special of the Day -->
+    <section id="special">
+        <h2 class="section-title">وجبة اليوم 🍽️</h2>
+        <div class="special-card">
+            <img src="{{ url_for('static', filename='images/special-dish.png') }}" alt="وجبة اليوم" class="special-img">
+            <div class="special-info">
+                <h3>طاجين لحم مع خضروات طازجة</h3>
+                <p>محضر من وصفة تقليدية مغربية، مع لمسة من أطلس هايدواي.</p>
+                <div class="special-price">متوفرة اليوم فقط!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location">
+        <h2 class="section-title">أين نحن؟</h2>
+        <div class="location">
+            <p>نقع في قلب الجبال، حيث تلتقي السماء بالصخور. إليك موقعنا الدقيق:</p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d672.2998512799533!2d-8.986064269413042!3d29.711731998443323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDQyJzQyLjIiTiA4wrA1OScxMi4yIlc!5e1!3m2!1sar!2sma!4v1767210249916!5m2!1sar!2sma" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 10px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="cta">
+            <h2>مستعد لرحلتك القادمة؟</h2>
+            <p>احجز الآن واحصل على خصم 10% لأول زيارة!</p>
+            <a href="https://wa.me/+212713009090?text=مرحباً، أريد حجز إقامة في أطلس هايدواي" target="_blank" class="btn">احجز عبر واتساب</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 أطلس هايدواي. جميع الحقوق محفوظة.</p>
+        <p>للاستفسارات: <a href="mailto:info@atlashideaway.com" style="color:#f1c40f;">info@atlashideaway.com</a></p>
+    </footer>
+
+</body>
+</html>
